@@ -1,0 +1,157 @@
+.sidebar {
+    grid-area: sidebar;
+    background: #F7F5F2;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+
+    img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .category-con {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .add-todo-con {
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+
+            .add-todo-btn {
+                width: 30px;
+                height: 30px;
+                border-radius: 15%;
+                border: none;
+                background: #F56D91;
+
+                font-size: 1.5rem;
+                color: #F7F5F2;
+                cursor: pointer;
+                transition: transform 0.3s, background-color 0.3s; // Add transition for smooth effect
+
+                &:hover {
+                    background: #E0537A;
+                }
+            }
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+        #today-category,
+        #week-category {
+            padding: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            line-height: 20px;
+
+            cursor: pointer;
+            transition: transform 0.3s, background-color 0.3s;
+
+            .category-icon {
+                width: 30px;
+                height: 30px;
+            }
+
+            &:hover {
+                background: #DFDFDE;
+            }
+
+            span {
+                margin-left: 10px;
+            }
+        }
+
+    }
+
+    .projects-con {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h2 {
+            margin: 0;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+            display: none;
+            /* Hidden by default */
+        }
+
+        .project-list-con {
+            width: 100%;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+
+            .project-list {
+                margin: 0;
+                display: flex;
+                padding: 0 10px;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                transition: transform 0.3s, background-color 0.3s;
+
+                &:hover {
+                    background: #DFDFDE;
+                }
+
+                &:hover .delete-icon {
+                    display: block;
+                }
+
+                .delete-icon {
+                    display: none;
+                    transition: transform 0.3s, background-color 0.3s;
+                }
+
+                .selected-project {
+                    background: red;
+                    color: white;
+                    /* Optional, to make the text visible on red */
+                }
+            }
+        }
+
+        .add-project-btn {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .save-project-con {
+            display: none;
+            flex-direction: column;
+            gap: 10px;
+
+            input {
+                padding: 5px;
+                outline: none;
+            }
+
+            .btn-con {
+                display: flex;
+                justify-content: space-between;
+
+                button {
+                    padding: 5px 41px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

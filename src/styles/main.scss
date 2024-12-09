@@ -1,0 +1,49 @@
+main {
+    grid-area: main;
+    padding: 1rem;
+    background: #F7F5F2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+    .todo-item {
+        margin: 0;
+        padding: 10px;
+        width: 250px;
+
+        /* Ensure all items have the same height */
+        height: 300px;
+        /* Set a fixed height */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        /* Spread content evenly */
+
+        border-radius: 4px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+        h3,
+        p {
+            margin: 10px;
+        }
+
+        .description {
+            flex-grow: 1;
+            /* Allow this area to grow and shrink */
+            min-height: 50px;
+            max-height: 150px;
+            /* Constrain the max height */
+            overflow: auto;
+            /* Enable scrolling for long content */
+        }
+
+        .delete-icon {
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+        }
+    }
+}

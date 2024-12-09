@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MyToDo</title>
+    </head>
+    <body>
+        <div class="container">
+            <!-- Modal for adding a new todo -->
+            <div id="todoModal" class="modal" style="display: none;">
+                <div class="modal-content">
+                    <span class="close-modal">&times;</span>
+                    <h2>Add New Todo</h2>
+                    <form id="todoForm">
+                        <label for="todoTitle">Title</label>
+                        <input type="text" id="todoTitle" required>
+                        <label for="todoDescription">Description</label>
+                        <textarea id="todoDescription" required></textarea>
+                        <label for="todoDueDate">Due Date</label>
+                        <input type="date" id="todoDueDate" required>
+                        <label for="todoPriority">Priority</label>
+                        <select id="todoPriority" required>
+                            <option value="low">Low</option>
+                            <option value="medium">Medium</option>
+                            <option value="high">High</option>
+                        </select>
+                        <button type="submit">Add Todo</button>
+                    </form>
+                </div>
+            </div>
+            <!-- end -->
+            <header>
+                <h1>My Todo</h1>
+                <img alt="Checklist Image" id="checklistImg">
+            </header>
+            <section class="sidebar">
+                <div class="category-con">
+                    <div class="add-todo-con">
+                        <button class="add-todo-btn">+</button>
+                        <span>Add New Todo</span>
+                    </div>
+                    <div id="today-category">
+                        <img alt="Bell" id="todayImg" class="category-icon">
+                        <span>Today</span>
+                    </div>
+                    <div id="week-category">
+                        <img alt="Calendar" id="weekImg" class="category-icon">
+                        <span>This Week</span>
+                    </div>
+                </div>
+                <div class="projects-con">
+                    <h2>My Projects</h2>
+                    <div class="project-list-con">
+                        <div class="project-list">
+                            <div class="project">Default Project</div>
+                        </div>
+                    </div>
+                    <div id="error-message" class="error-message"></div>
+                    <button class="add-project-btn">Add New Project</button>
+                    <div class="save-project-con">
+                        <input type="text" placeholder="Enter project name" id="saveInput">
+                        <div class="btn-con">
+                            <button id="save-project-btn">Save</button>
+                            <button id="cancel-project-btn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <main class="main"></main>
+            <footer>
+                Made by Frank
+                <span></span>
+            </footer>
+        </div>
+        <script src="./bundle.js"></script>
+    </body>
+</html>
